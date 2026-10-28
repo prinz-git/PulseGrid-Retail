@@ -155,6 +155,7 @@ PulseGrid - Retail/
 ├── .github/workflows/ci.yml       # GitHub Actions CI/CD pipeline
 ├── Dockerfile                     # Multi-stage Docker build
 ├── requirements.txt               # Python dependencies
+├── streamlit_app.py               # Streamlit Cloud deployment entrypoint
 └── README.md
 ```
 
@@ -240,8 +241,20 @@ python3.11 -m venv .venv && source .venv/bin/activate
 pip install -r requirements.txt
 
 # Run the dashboard
-streamlit run dashboard/app.py
+streamlit run streamlit_app.py
+# or: streamlit run dashboard/app.py
 ```
+
+### Streamlit Community Cloud Deployment
+
+To deploy on [Streamlit Community Cloud](https://share.streamlit.io):
+1. Connect your GitHub repository.
+2. Select branch `main`.
+3. Set **Main file path** to either:
+   - `streamlit_app.py` *(default, points directly to the dashboard)*
+   - `dashboard/app.py` *(uses lightweight `dashboard/requirements.txt` for faster build)*
+4. Set **Python version** to `3.11`.
+5. Click **Deploy**.
 
 ### Docker
 
