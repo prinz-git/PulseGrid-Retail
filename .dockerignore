@@ -1,0 +1,12 @@
+.git/
+.cache/
+.venv/
+**/.venv/
+**/__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+notebooks/
+bi/
+reports/figures/
+data/raw/*
+!data/raw/.gitkeep

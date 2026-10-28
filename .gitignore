@@ -1,0 +1,217 @@
+# ==============================================================================
+# PulseGrid - Retail — .gitignore
+# ==============================================================================
+
+# ------------------------------------------------------------------------------
+# Python & Bytecode
+# ------------------------------------------------------------------------------
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Distribution / packaging
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# PyInstaller / packaging tools
+*.manifest
+*.spec
+
+# ------------------------------------------------------------------------------
+# Virtual Environments
+# ------------------------------------------------------------------------------
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+.env/
+.venv/
+.venv*/
+**/.venv/
+envs/
+.conda/
+
+# ------------------------------------------------------------------------------
+# Jupyter Notebooks & IPython
+# ------------------------------------------------------------------------------
+.ipynb_checkpoints/
+*/.ipynb_checkpoints/*
+.ipython/
+ipython_config.py
+
+# ------------------------------------------------------------------------------
+# Data & Datasets
+# ------------------------------------------------------------------------------
+# Raw transaction dataset downloads (from notebooks/00_data_ingestion.ipynb)
+/data/raw/**
+!/data/raw/.gitkeep
+
+# Large unaggregated transaction export generated during preprocessing
+data/processed/transactions_clean.csv
+
+# Large archives and spreadsheet files
+*.zip
+*.tar.gz
+*.tgz
+*.rar
+*.7z
+
+# ------------------------------------------------------------------------------
+# Model Artifacts & Checkpoints
+# ------------------------------------------------------------------------------
+# Saved model binaries & weights (e.g., PyTorch LSTM weights, XGBoost models)
+models/*
+!models/.gitkeep
+
+# Serialized model formats across workspace
+*.pt
+*.pth
+*.pkl
+*.pickle
+*.joblib
+*.h5
+*.hdf5
+*.onnx
+*.bin
+
+# ------------------------------------------------------------------------------
+# MLflow & Experiment Tracking
+# ------------------------------------------------------------------------------
+mlruns/
+mlartifacts/
+mlflow/mlruns/
+mlflow/mlartifacts/
+mlflow.db
+*.sqlite
+*.sqlite3
+!mlflow/.gitkeep
+
+# Other local experiment and training outputs
+wandb/
+lightning_logs/
+tensorboard/
+events.out.tfevents.*
+
+# ------------------------------------------------------------------------------
+# Streamlit & Dashboard Secrets
+# ------------------------------------------------------------------------------
+.streamlit/secrets.toml
+dashboard/.streamlit/secrets.toml
+secrets.toml
+.streamlit/*.token
+
+# ------------------------------------------------------------------------------
+# Power BI & BI Tools
+# ------------------------------------------------------------------------------
+# Binary report and template files (unpacked report assets are tracked in bi/powerbi/)
+*.pbix
+*.pbit
+*.~*
+~$*
+
+# ------------------------------------------------------------------------------
+# Testing, Coverage & Linters
+# ------------------------------------------------------------------------------
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.tox/
+.nox/
+.coverage
+.coverage.*
+htmlcov/
+coverage.xml
+nosetests.xml
+*.cover
+*.py,cover
+.hypothesis/
+
+# ------------------------------------------------------------------------------
+# Environment Variables & Secrets
+# ------------------------------------------------------------------------------
+.env
+.env.*
+!.env.example
+!.env.template
+*.pem
+*.key
+*.crt
+*service-account*.json
+*credentials*.json
+
+# ------------------------------------------------------------------------------
+# IDEs & Text Editors
+# ------------------------------------------------------------------------------
+# VS Code
+.vscode/
+
+# JetBrains (PyCharm, etc.)
+.idea/
+*.iml
+*.iws
+*.ipr
+
+# Sublime Text
+*.sublime-workspace
+*.sublime-project
+
+# Vim / Emacs
+*.swp
+*.swo
+*~
+.#*
+
+# ------------------------------------------------------------------------------
+# Operating System Files
+# ------------------------------------------------------------------------------
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+[Dd]esktop.ini
+
+# Linux
+.directory
+
+# ------------------------------------------------------------------------------
+# Logs & Temporary Files
+# ------------------------------------------------------------------------------
+*.log
+logs/
+tmp/
+temp/
+*.tmp
+*.bak
+**/.cache/
+**/__pycache__/
+**/.ipynb_checkpoints/
+**/.pytest_cache/
+**/.ruff_cache/
+**/.mypy_cache/
